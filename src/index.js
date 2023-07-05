@@ -22,8 +22,7 @@ app.engine('.hbs', exphbs({
   defaultLayout: 'main',
   layoutsDir: path.join(app.get('views'), 'layouts'),
   partialsDir: path.join(app.get('views'), 'partials'),
-  extname: '.hbs',
-  helpers: require('./lib/handlebars')
+  extname: '.hbs'
 }))
 app.set('view engine', '.hbs');
 
@@ -33,7 +32,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 app.use(session({
-  secret: 'faztmysqlnodemysql',
+  secret: 'dreamfollowers',
   resave: false,
   saveUninitialized: false,
   store: new MySQLStore(database)
